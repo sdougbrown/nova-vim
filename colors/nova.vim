@@ -389,6 +389,38 @@ call s:highlight_helper("EasyMotionShade", "#899BA6", "")
 
 
 " ==================================================================
+" SYNTAX OVERRIDES (after syntax plugins load)
+" ==================================================================
+" Syntax plugins use 'highlight def link' which can override colorscheme
+" highlights depending on load order. Re-apply after syntax files load.
+
+augroup NovaSyntaxOverrides
+  autocmd!
+  autocmd Syntax typescriptreact
+    \ highlight tsxTagName guifg=#9A93E1 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxIntrinsicTagName guifg=#9A93E1 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxCloseTag guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxTag guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxCloseString guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxAttrib guifg=#A8CE93 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxEqual guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxString guifg=#DADA93 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxCommentInvalid guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE
+  autocmd Syntax javascriptreact
+    \ highlight jsxTagName guifg=#9A93E1 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxComponentName guifg=#9A93E1 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxOpenPunct guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxClosePunct guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxCloseString guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxCloseTag guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxAttrib guifg=#A8CE93 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxEqual guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxBraces guifg=#F2C38F guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxString guifg=#DADA93 guibg=NONE gui=None cterm=NONE term=NONE
+augroup END
+
+
+" ==================================================================
 " VARIABLES
 " ==================================================================
 
