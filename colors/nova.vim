@@ -389,6 +389,21 @@ call s:highlight_helper("EasyMotionShade", "#899BA6", "")
 
 
 " ==================================================================
+" NERDTREE
+" ==================================================================
+
+" Darker background for file tree pane (uses wincolor, Vim 8.2+)
+call s:highlight_helper("NERDTreeNormal", "#C5D4DD", "#334049")
+highlight NERDTreeEndOfBuffer guifg=#334049 guibg=#334049
+highlight NERDTreeCursorLine guibg=#3C4C55 gui=None cterm=NONE term=NONE
+
+augroup NovaNERDTree
+  autocmd!
+  autocmd FileType nerdtree setlocal wincolor=NERDTreeNormal
+augroup END
+
+
+" ==================================================================
 " SYNTAX OVERRIDES (after syntax plugins load)
 " ==================================================================
 " Syntax plugins use 'highlight def link' which can override colorscheme
