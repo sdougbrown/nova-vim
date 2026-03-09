@@ -38,7 +38,7 @@ call s:highlight_helper("WarningMsg", "#DF8C8C", "")
 call s:highlight_helper("SpellBad", "#DF8C8C", "")
 call s:highlight_helper("SpellCap", "#DF8C8C", "")
 call s:highlight_helper("Todo", "#DF8C8C", "")
-call s:highlight_helper("SignColumn", "NONE", "#DF8C8C")
+call s:highlight_helper("SignColumn", "NONE", "")
 call s:highlight_helper("typescriptParenError", "#DF8C8C", "")
 call s:highlight_helper("NeomakeErrorSign", "#DF8C8C", "")
 call s:highlight_helper("NeomakeWarningSign", "#DF8C8C", "")
@@ -217,10 +217,10 @@ call s:highlight_helper("jsxRegion", "#DADA93", "")
 call s:highlight_helper("jsxTagName", "#9A93E1", "")
 call s:highlight_helper("jsxComponentName", "#9A93E1", "")
 call s:highlight_helper("jsxAttrib", "#A8CE93", "")
-call s:highlight_helper("jsxOpenPunct", "#DF8C8C", "")
-call s:highlight_helper("jsxClosePunct", "#DF8C8C", "")
-call s:highlight_helper("jsxCloseString", "#DF8C8C", "")
-call s:highlight_helper("jsxCloseTag", "#DF8C8C", "")
+call s:highlight_helper("jsxOpenPunct", "#899BA6", "")
+call s:highlight_helper("jsxClosePunct", "#899BA6", "")
+call s:highlight_helper("jsxCloseString", "#899BA6", "")
+call s:highlight_helper("jsxCloseTag", "#899BA6", "")
 call s:highlight_helper("jsxEqual", "#899BA6", "")
 call s:highlight_helper("jsxBraces", "#F2C38F", "")
 call s:highlight_helper("jsxString", "#DADA93", "")
@@ -399,7 +399,7 @@ highlight NERDTreeCursorLine guibg=#3C4C55 gui=None cterm=NONE term=NONE
 
 augroup NovaNERDTree
   autocmd!
-  autocmd FileType nerdtree setlocal wincolor=NERDTreeNormal
+  autocmd FileType nerdtree setlocal wincolor=NERDTreeNormal signcolumn=no
 augroup END
 
 
@@ -414,9 +414,9 @@ augroup NovaSyntaxOverrides
   autocmd Syntax typescriptreact
     \ highlight tsxTagName guifg=#9A93E1 guibg=NONE gui=None cterm=NONE term=NONE |
     \ highlight tsxIntrinsicTagName guifg=#9A93E1 guibg=NONE gui=None cterm=NONE term=NONE |
-    \ highlight tsxCloseTag guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
-    \ highlight tsxTag guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
-    \ highlight tsxCloseString guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxCloseTag guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxTag guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight tsxCloseString guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
     \ highlight tsxAttrib guifg=#A8CE93 guibg=NONE gui=None cterm=NONE term=NONE |
     \ highlight tsxEqual guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
     \ highlight tsxString guifg=#DADA93 guibg=NONE gui=None cterm=NONE term=NONE |
@@ -424,10 +424,10 @@ augroup NovaSyntaxOverrides
   autocmd Syntax javascriptreact
     \ highlight jsxTagName guifg=#9A93E1 guibg=NONE gui=None cterm=NONE term=NONE |
     \ highlight jsxComponentName guifg=#9A93E1 guibg=NONE gui=None cterm=NONE term=NONE |
-    \ highlight jsxOpenPunct guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
-    \ highlight jsxClosePunct guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
-    \ highlight jsxCloseString guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
-    \ highlight jsxCloseTag guifg=#DF8C8C guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxOpenPunct guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxClosePunct guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxCloseString guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
+    \ highlight jsxCloseTag guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
     \ highlight jsxAttrib guifg=#A8CE93 guibg=NONE gui=None cterm=NONE term=NONE |
     \ highlight jsxEqual guifg=#899BA6 guibg=NONE gui=None cterm=NONE term=NONE |
     \ highlight jsxBraces guifg=#F2C38F guibg=NONE gui=None cterm=NONE term=NONE |
